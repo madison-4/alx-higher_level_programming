@@ -6,7 +6,7 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *iter, fast, slow;
+	listint_t *iter, *fast, *slow;
 
 	iter = list;
 	fast = iter;
