@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-# A function to add to numbers
-def add(a, b):
+# A function to get the power of a number raise to another
+def pow(a, b):
     return (a ** b)
