@@ -2,6 +2,7 @@
 /**
  * insert_node - inserts a node to a sorted linked list
  * @head: head of the linked list
+ * @number: number part of the node in the list
  * Return: address of new node or NULL on failure
  */
 listint_t *insert_node(listint_t **head, int number)
@@ -12,6 +13,11 @@ listint_t *insert_node(listint_t **head, int number)
 	if (new == NULL)
 		return (NULL);
 	new->n = number;
+	if (!(head))
+	{
+		*head = new;
+		return (new);
+	}
 	iter = *head;
 	while (iter != NULL)
 	{
