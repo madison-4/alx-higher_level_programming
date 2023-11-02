@@ -1,14 +1,11 @@
 #!/usr/bin/python3
-def islower(c):
-    value = ord(c)
-    if ((value >= 97) and (value < 123)):
-        return (True)
-    else:
-        return (False)
+# 8-uppercase.py
+
+
 def uppercase(str):
-    temp = list(str)
-    for i in temp:
-        if ((islower(i))):
-            temp[i] = i + 32
-        temp[i] = i
-    return (temp)
+    """Print a string in uppercase."""
+    for c in str:
+        if ord(c) >= 97 and ord(c) <= 122:
+            c = chr(ord(c) - 32)
+        print("{}".format(c), end="")
+    print("")
