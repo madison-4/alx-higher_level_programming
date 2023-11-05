@@ -7,3 +7,4 @@ def element_at(my_list, idx, element):
     if (idx >= length):
         return (None)
     my_list[idx] = element
+    return (my_list)
