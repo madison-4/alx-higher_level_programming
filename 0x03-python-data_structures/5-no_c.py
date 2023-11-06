@@ -6,8 +6,10 @@ def no_c(my_string):
         new_str = ''
         looplist = str_list.copy()
         for letter in looplist:
-            if (letter == 'C' or letter == 'c'):
+            if (letter == 'C'):
                 looplist.remove(letter)
+            if (letter == 'c'):
+                looplost.remove(letter)
         for let in looplist:
             new_str += str(let)
         return (new_str)
