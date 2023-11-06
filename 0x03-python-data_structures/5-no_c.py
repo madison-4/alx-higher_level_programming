@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-0;276;0c# remove the letter c from the string
+# remove the letter c from the string
 
 
 def no_c(my_string):
