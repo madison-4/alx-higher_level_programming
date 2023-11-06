@@ -12,4 +12,4 @@ def no_c(my_string):
             new_str += str(let)
         return (new_str)
     else:
-        return (my_string)
+        return (my_string.copy())
