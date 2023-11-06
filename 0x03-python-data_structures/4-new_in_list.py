@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # retrieve an element from a list
-def replace_in_list(my_list, idx, element):
+def new_in_list(my_list, idx, element):
     if (idx < 0):
         return (my_list.copy())
     length = len(my_list)
