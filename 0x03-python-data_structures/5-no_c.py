@@ -11,6 +11,4 @@ def no_c(my_string):
                 looplist.remove(letter)
         for char in looplist:
             new_str += char
-        print(looplist)
-        print(new_str)
-no_c("C c is cfun not c too")
+        return (new_str)
