@@ -12,8 +12,6 @@ def no_c(my_string):
                 looplist.remove(letter)
             if (letter == 'c'):
                 looplist.remove(letter)
-            if (letter == 'c'):
-                looplist.remove(letter)
         for let in looplist:
             new_str += str(let)
         return (new_str)
