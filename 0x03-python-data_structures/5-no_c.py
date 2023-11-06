@@ -11,3 +11,5 @@ def no_c(my_string):
         for let in looplist:
             new_str += let
         return (new_str)
+    else:
+        return (my_string)
