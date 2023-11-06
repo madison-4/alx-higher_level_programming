@@ -1,4 +1,4 @@
-!/usr/bin/python3
+#!/usr/bin/python3
 # remove the letter c from the string
 
 
