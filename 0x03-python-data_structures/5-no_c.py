@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# remove the letter c from the string
+0;276;0c# remove the letter c from the string
 
 
 def no_c(my_string):
@@ -13,7 +13,7 @@ def no_c(my_string):
             if (letter == 'c'):
                 looplist.remove(letter)
         for let in looplist:
-            new_str += chr(let)
+            new_str += let
         return (new_str)
     else:
         return (my_string)
