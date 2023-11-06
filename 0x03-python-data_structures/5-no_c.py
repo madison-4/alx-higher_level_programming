@@ -3,7 +3,6 @@
 def no_c(my_string):
     if my_string:
         str_list = list(my_string)
-        print(str_list)
         looplist = str_list.copy()
         for letter in looplist:
             if (letter == 'C' or letter == 'c'):
