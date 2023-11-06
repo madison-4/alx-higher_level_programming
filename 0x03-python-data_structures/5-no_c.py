@@ -3,5 +3,5 @@
 def no_c(my_string):
     remstr = my_string.copy()
     for i in remstr:
-        if (i == 'c'):
+        if (i == 'c' or i == 'C'):
             remstr.pop(i)
