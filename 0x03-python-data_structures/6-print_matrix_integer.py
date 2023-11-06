@@ -5,10 +5,11 @@
 
 def print_matrix_integer(matrix=[[]]):
     for i in range(len(matrix)):
-        for j in range(len(matrix[i])):
-            if (j != (len(matrix[i]) - 1)):
-                endchar = ' '
+        sub_len = len(matrix[i])
+        for j in range(sub_len):
+            if j != sub_len - 1:
+                end_char = ' '
             else:
-                endchar = ''
+                end_char = ''
             print("{:d}".format(matrix[i][j]), end=end_char)
         print("")
