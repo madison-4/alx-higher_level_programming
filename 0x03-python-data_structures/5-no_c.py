@@ -13,7 +13,7 @@ def no_c(my_string):
             if (letter == 'c'):
                 looplist.remove(letter)
         for let in looplist:
-            new_str += str(let)
+            new_str += chr(let)
         return (new_str)
     else:
         return (my_string)
