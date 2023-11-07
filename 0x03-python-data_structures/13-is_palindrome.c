@@ -7,7 +7,7 @@
 int is_palindrome(listint_t **head)
 {
 
-	listint_t *fast, *slow, *iter = *head;
+	listint_t *fast, *slow, *iter = *head, *prev_slow;
 	if (*head == NULL)
 		return (1);
 	fast = iter;
@@ -15,6 +15,7 @@ int is_palindrome(listint_t **head)
 	while ((fast != NULL) && (fast->next != NULL))
 	{
 		fast = fast->next->next;
+		prev_slow = slow;
 		slow = slow->next;
 	}
 	return (0);
@@ -31,11 +32,19 @@ listint_t *_reverselist(listint_t **head)
 	current = *head;
 	while (current != NULL)
 	{
-		next = current->next;
+		nextref = current->next;
 		current-> next = prev;
 		prev = current;
-		current = next;
+		current = nextref;
 	}
 	*head = prev;
 	return (prev);
 }
+/**
+ * comparelist - copare two lists and find if they're equal
+ * @head1: head of first list
+ * @head2: head of second list
+ * Return: 1 if they are, 0 if they aren't
+ */
+int comparelist(listint_t **head1, listint_t **head2)
+{
