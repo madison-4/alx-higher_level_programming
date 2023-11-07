@@ -1,4 +1,4 @@
-#11;rgb:0000/0000/0000include "lists.h"
+#include "lists.h"
 /**
  * is_palindrome - checks if a linked list is a palindrome
  * @head: head of the linked ;list
