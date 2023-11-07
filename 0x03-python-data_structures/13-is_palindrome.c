@@ -1,4 +1,4 @@
-#include "lists.h"
+#11;rgb:0000/0000/0000include "lists.h"
 /**
  * is_palindrome - checks if a linked list is a palindrome
  * @head: head of the linked ;list
@@ -8,6 +8,7 @@ int is_palindrome(listint_t **head)
 {
 
 	listint_t *fast, *slow, *iter = *head, *prev_slow;
+
 	if (*head == NULL)
 		return (1);
 	fast = iter;
@@ -33,7 +34,7 @@ listint_t *_reverselist(listint_t **head)
 	while (current != NULL)
 	{
 		nextref = current->next;
-		current-> next = prev;
+		current->next = prev;
 		prev = current;
 		current = nextref;
 	}
@@ -48,3 +49,19 @@ listint_t *_reverselist(listint_t **head)
  */
 int comparelist(listint_t **head1, listint_t **head2)
 {
+	listint_t temp1 = *head1, temp2 = *head2;
+
+	while (temp1 && temp2)
+	{
+		if ((temp1->n) == (temp1->n))
+		{
+			temp1 = temp1->next;
+			temp2 = temp2->next;
+		}
+		else
+			return (0);
+	}
+	if ((temp1 == NULL) && (temp2 == NULL))
+		return (1);
+	return (0);
+}
