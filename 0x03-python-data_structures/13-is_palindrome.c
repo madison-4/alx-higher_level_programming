@@ -7,19 +7,41 @@
 int is_palindrome(listint_t **head)
 {
 
-	listint_t *fast, *slow, *iter = *head, *prev_slow;
+	listint_t *fast, *slow, *iter = *head, *prev_slow = *head;
+	listint_t *midnode = NULL, *sechalf;
+	int res = 1;
 
 	if (*head == NULL)
 		return (1);
 	fast = iter;
 	slow = iter;
-	while ((fast != NULL) && (fast->next != NULL))
+	if ((iter != NULL) && (iter->next != NULL))
 	{
-		fast = fast->next->next;
-		prev_slow = slow;
-		slow = slow->next;
+		while ((fast != NULL) && (fast->next != NULL))
+		{
+			fast = fast->next->next;
+			prev_slow = slow;
+			slow = slow->next;
+		}
+		if ((fast != NULL))
+		{
+			midnode = slow;
+			slow = slow->next;
+		}
+		sechalf = slow;
+		prev_slow->next = NULL;
+		(void) _reverselist(&sechalf);
+		res = comparelist(head, &sechalf);
+		(void) _reverselist(&sechalf);
+		if (midnode)
+		{
+			prev_slow->next = midnode;
+			midnode->next = sechalf;
+		}
+		else
+			prev_slow->next = sechalf;
 	}
-	return (0);
+	return (res);
 }
 /**
  * _reverselist - reverse a linkedlist
@@ -49,11 +71,11 @@ listint_t *_reverselist(listint_t **head)
  */
 int comparelist(listint_t **head1, listint_t **head2)
 {
-	listint_t temp1 = *head1, temp2 = *head2;
+	listint_t *temp1 = *head1, *temp2 = *head2;
 
 	while (temp1 && temp2)
 	{
-		if ((temp1->n) == (temp1->n))
+		if ((temp1->n) == (temp2->n))
 		{
 			temp1 = temp1->next;
 			temp2 = temp2->next;
