@@ -6,7 +6,7 @@ def only_diff_elements(set_1, set_2):
     for elem in set_1:
         for el in set_2:
             if (elem == el):
-                break
+                continue
             ret.append(elem)
             ret.append(el)
     return (set(ret))
