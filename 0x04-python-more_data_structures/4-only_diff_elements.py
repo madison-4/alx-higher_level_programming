@@ -1,5 +1,3 @@
-
-
 #!/usr/bin/python3
 # get common elements in only one list
 # I dislike this brute force method
