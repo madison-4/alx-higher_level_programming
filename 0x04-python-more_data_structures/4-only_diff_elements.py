@@ -4,9 +4,12 @@
 def only_diff_elements(set_1, set_2):
     ret = []
     for elem in set_1:
+        valret = 0
         for el in set_2:
             if (elem == el):
-                continue
-            ret.append(elem)
+                valret = 1
+                break
             ret.append(el)
+        if (valret == 0):
+            ret.append(elem)
     return (set(ret))
