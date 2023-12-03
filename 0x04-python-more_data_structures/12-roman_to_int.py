@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 # convert to arabic numbers from roman numbers
 def roman_to_int(roman_string):
-    romint = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100,'D': 500, 'M': 1000}
+    romint = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
     s, value = 0, 0
     place1 = 0
-    if not roman_string:
+    if not roman_string or (type(roman_string) != str):
         return 0
     while (s < (len(roman_string))):
         value1 = romint.get(roman_string[s])
