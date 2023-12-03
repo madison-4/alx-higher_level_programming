@@ -1,5 +1,4 @@
 #!/usr//bin/python3
-#!/usr/bin/python3
 # advanced task
 # give weighted average
 def weight_average(my_list=[]):
