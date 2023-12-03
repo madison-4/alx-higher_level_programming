@@ -1,4 +1,3 @@
 #!/usr/bin/python3
 def square_matrix_map(matrix=[]):
-    ret = [list(map(lambda x: x ** 2, matrix[i])) for i in range(len(matrix))]
-    return (ret)
+    return ([list(map(lambda x: x ** 2, matrix[i])) for i in range(len(matrix))])
