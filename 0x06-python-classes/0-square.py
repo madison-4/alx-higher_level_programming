@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+"""
+Define a square class that takes a square
+The sqaure class is empty
+"""
+
+
+class Square:
+    pass
