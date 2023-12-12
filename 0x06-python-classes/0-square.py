@@ -5,4 +5,7 @@ The sqaure class is empty
 
 
 class Square:
+    """ This is an empty class
+    It has no attributes
+    """
     pass
