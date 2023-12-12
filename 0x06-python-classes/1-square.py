@@ -9,7 +9,6 @@ class Square:
     It has a size attribute as the private attribute
     """
 
-
     def __init__(self, size):
         """The initualizer for size
 
