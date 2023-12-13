@@ -9,7 +9,7 @@ class Square:
     It has a size attribute as the private attribute
     """
 
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         """The initualizer for size
 
         args:
@@ -20,12 +20,12 @@ class Square:
             raise TypeError('size must be an integer')
         if (size < 0):
             raise ValueError('size must be >= 0')
-        self.size = size
+        self.__size = size
         if (type(position) is not tuple):
             raise TypeError('position must be a tuple of 2 positive integers')
         if len(position) != 2:
             raise TypeError('position must be a tuple of 2 positive integers')
-        self.position = position
+        self.__position = position
 
     def area(self):
         """This function gets the area of the sqaure object
@@ -59,8 +59,9 @@ class Square:
             print()
             return (0)
         for i in range(self.__size):
-            for y in range(self.__position[0]):
-                print(' ',end='')
+            if (self.__position[1] >= 0):
+                for y in range(self.__position[0]):
+                    print(' ', end='')
             for j in range(self.__size):
                 print('#', end='')
             print()
