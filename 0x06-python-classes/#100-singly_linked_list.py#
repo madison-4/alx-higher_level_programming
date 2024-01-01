@@ -8,4 +8,5 @@ class Node:
     def __init__(self, data):
         """This function is to initualize the node class
         """
-        self.data = 
+        
+        self.__data = data
