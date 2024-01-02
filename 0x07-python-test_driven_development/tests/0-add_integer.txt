@@ -1,0 +1,3 @@
+# Test for function of addition
+The tests should ensure that the inputs are correct and the output.
+Ideally they should ensure the function works as intended
