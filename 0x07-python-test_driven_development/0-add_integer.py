@@ -4,6 +4,8 @@
 def add_integer(a, b=98):
     """A simple addition function
     It adds two integers and returns the results
+    Some tests here
+
     """
     
     if (type(a) is not int and type(a) is not float):

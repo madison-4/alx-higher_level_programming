@@ -17,4 +17,12 @@ TypeError: a must be an integer
 >>> add_integer(56, {98, 76})
 Traceback (most recent call last):
 ...
-TypeError
+TypeError: b must be an integer
+>>> add_integer('str', 'stry')
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer([90, 89], 87)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
