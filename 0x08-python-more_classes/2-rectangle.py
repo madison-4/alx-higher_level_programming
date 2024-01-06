@@ -59,6 +59,7 @@ class Rectangle:
         self.__height = value
         return (self.__height)
 
+    @property
     def area(self):
         """get the rectangle area
         """
