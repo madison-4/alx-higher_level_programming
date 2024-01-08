@@ -78,9 +78,7 @@ class Rectangle:
         """ Prints the rectangle based on width and height
         """
 
-        for i in range(height):
-            for y in range(width):
+        for i in range(self.__height):
+            for y in range(self.__width):
                 print('#', end='')
             print
-    def print(self):
-        
