@@ -82,4 +82,5 @@ class Rectangle:
             for y in range(width):
                 print('#', end='')
             print
-
+    def print(self):
+        
