@@ -78,5 +78,9 @@ class Rectangle:
         """ Prints the rectangle based on width and height
         """
 
-        tr = [['#' for t in range(self.__width)]for tree in range (self.__height)]
+  tre = ''      
+
+tr = [['#' for t in range(self.__width)]for tree in range (self.__height)]
+        tr = tr.join(' ')
+
         return (str(tr))
