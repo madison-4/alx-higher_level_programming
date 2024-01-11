@@ -79,8 +79,6 @@ class Rectangle:
         """
 
         tre = ''
-        if (self.__height == 0 or self.__width == 0):
-            return (tre)
         for t in range(self.__height):
             for tree in range(self.__width):
                 tre += '#'
