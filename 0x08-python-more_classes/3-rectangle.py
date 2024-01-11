@@ -79,10 +79,9 @@ class Rectangle:
         """
 
         tre = ''
-        tr = []
         for t in range(self.__height):
             for tree in range(self.__width):
-                tr.append('#')
-            tr.append('n')
-#        flat_list = [el for elem in tr for el in elem]
-        return (tre.join(tr))
+                tre += '#'
+            tre += '\n'
+        tre = tre[:-1]
+        return (tre)
