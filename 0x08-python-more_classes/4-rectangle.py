@@ -85,3 +85,8 @@ class Rectangle:
             tre += '\n'
         tre = tre[:-1]
         return (tre)
+
+    def __repr__(self):
+        """give str rep back
+        """
+        return (self.__str(self))
