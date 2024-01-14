@@ -89,4 +89,4 @@ class Rectangle:
     def __repr__(self):
         """give str rep back
         """
-        return (self.__str(self))
+        return (self.__str__(self))
