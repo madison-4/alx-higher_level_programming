@@ -33,3 +33,7 @@ class Node:
         if ((type(value) is not None) and (type(value) is not Node)):
             raise TypeError('next_node must be a Node object')
         self.__next_node = value
+
+class List:
+    def __init__(self):
+        
