@@ -38,3 +38,9 @@ class SinglyLinkedList:
     head = None
 
     def __init__(self):
+        next = head
+        while (next is not none):
+            print(next)
+            next = next.self.next
+
+            
