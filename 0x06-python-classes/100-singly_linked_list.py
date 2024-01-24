@@ -35,12 +35,7 @@ class Node:
         self.__next_node = value
 
 class SinglyLinkedList:
-    head = None
 
     def __init__(self):
-        next = head
-        while (next is not none):
-            print(next)
-            next = next.self.next
-
-            
+        if (self.head is not None):
+            self.head = 
