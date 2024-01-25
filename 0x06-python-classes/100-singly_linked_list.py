@@ -20,6 +20,13 @@ class Node:
         """
         return (self.__data)
 
+    @data.setter
+    def data(self, value):
+        """set the data value to value
+        """
+        if (type(value) is not int):
+            raise TypeError("data must be an integer")
+        self.__data = value
     @property
     def next_node(self):
         """A getter for the next node class
@@ -37,5 +44,14 @@ class Node:
 class SinglyLinkedList:
 
     def __init__(self):
-        if (self.head is not None):
-            self.head = 
+        """initializer for linked lis class
+        """
+
+        self.head = None
+
+    def sorted_insert(self, value):
+        """function to insert and sort values
+        """
+
+        if self.head is None:
+            self.head = value
