@@ -53,5 +53,21 @@ class SinglyLinkedList:
         """function to insert and sort values
         """
 
-        if self.head is None:
-            self.head = value
+        new = Node(value)
+        if (self.head is None):
+            self.head = new
+            return
+        else:
+            temp = self.head
+            while True:
+                if (temp.next_node is None):
+                    break
+                if (temp.value > new.head.value):
+                    temp = temp.next_node
+            new.next_node = temp.next_node
+            temp.next_node = new
+    def __print__(self):
+        temp = self.head
+        while (temp is not None):
+            print(temp)
+            temp = temp.next_node
