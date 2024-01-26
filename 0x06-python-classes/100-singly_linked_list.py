@@ -37,7 +37,7 @@ class Node:
     def next_node(self, value):
         """A setter for the next node
         """
-        if ((type(value) is not None) and (type(value) is not Node)):
+        if ((type(value) not in [None, Node])):
             raise TypeError('next_node must be a Node object')
         self.__next_node = value
 
@@ -53,20 +53,24 @@ class SinglyLinkedList:
         """function to insert and sort values
         """
 
-        new = Node(value)
+        new = Node(value, None)
         if (self.head is None):
             self.head = new
             return
         else:
             temp = self.head
-            while True:
-                if (temp.next_node is None):
-                    break
-                if (temp.value > new.head.value):
+            while (temp is not None):
+                if (temp.value > new.value):
                     temp = temp.next_node
-            new.next_node = temp.next_node
+                if (temp.value > new.value):
+                    break
+            new.next_node = prev.next_node
             temp.next_node = new
+            
     def __print__(self):
+        """dunder method to print list
+        """
+        
         temp = self.head
         while (temp is not None):
             print(temp)
