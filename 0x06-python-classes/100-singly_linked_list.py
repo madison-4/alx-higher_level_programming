@@ -18,12 +18,14 @@ class Node:
     def data(self):
         """This is a getter for the data variable
         """
+        
         return (self.__data)
 
     @data.setter
     def data(self, value):
         """set the data value to value
         """
+        
         if (type(value) is not int):
             raise TypeError("data must be an integer")
         self.__data = value
@@ -39,6 +41,7 @@ class Node:
     def next_node(self, value):
         """A setter for the next node
         """
+        
         if ((type(value) not in [None, Node])):
             raise TypeError('next_node must be a Node object')
         self.__next_node = value
@@ -48,7 +51,7 @@ class SinglyLinkedList:
     """
 
     def __init__(self):
-        """initializer for linked lis class
+        """struccture for the singly-linked list
         """
 
         self.head = None
@@ -90,4 +93,4 @@ class SinglyLinkedList:
         while (temp is not None):
             out += str(temp.data) + "\n"
             temp = temp.next_node
-        return (out + "\n")
+        return (out)
