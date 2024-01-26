@@ -73,6 +73,10 @@ class SinglyLinkedList:
             if (temp is None):
                 prev.next_node = new
                 return
+            if (temp == self.head):
+                new.next_node = temp
+                self.head = new
+                return
             new.next_node = temp
             prev.next_node = new
             
