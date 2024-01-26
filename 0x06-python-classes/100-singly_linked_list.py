@@ -27,10 +27,12 @@ class Node:
         if (type(value) is not int):
             raise TypeError("data must be an integer")
         self.__data = value
+        
     @property
     def next_node(self):
         """A getter for the next node class
         """
+        
         return (self.__next_node)
 
     @next_node.setter
@@ -42,6 +44,8 @@ class Node:
         self.__next_node = value
 
 class SinglyLinkedList:
+    """the linked list class
+    """
 
     def __init__(self):
         """initializer for linked lis class
@@ -59,13 +63,18 @@ class SinglyLinkedList:
             return
         else:
             temp = self.head
+            prev = temp
             while (temp is not None):
-                if (temp.value > new.value):
+                if (temp.data < new.data):
+                    prev = temp
                     temp = temp.next_node
-                if (temp.value > new.value):
+                else:
                     break
-            new.next_node = prev.next_node
-            temp.next_node = new
+            if (temp is None):
+                prev.next_node = new
+                return
+            new.next_node = temp
+            prev.next_node = new
             
     def __print__(self):
         """dunder method to print list
@@ -73,5 +82,5 @@ class SinglyLinkedList:
         
         temp = self.head
         while (temp is not None):
-            print(temp)
+            print(temp.data)
             temp = temp.next_node
