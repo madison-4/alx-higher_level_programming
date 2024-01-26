@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""This module is for  is for making linked lists in python
+"""
 
 # an attempt at making a singly lunked list
 class Node:
@@ -93,4 +95,4 @@ class SinglyLinkedList:
         while (temp is not None):
             out += str(temp.data) + "\n"
             temp = temp.next_node
-        return (out)
+        return (out[:-1])
