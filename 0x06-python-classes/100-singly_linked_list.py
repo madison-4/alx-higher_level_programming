@@ -80,11 +80,14 @@ class SinglyLinkedList:
             new.next_node = temp
             prev.next_node = new
             
-    def __print__(self):
+    def __str__(self):
         """dunder method to print list
         """
         
         temp = self.head
+        out = ""
+        
         while (temp is not None):
-            print(temp.data)
+            out += str(temp.data) + "\n"
             temp = temp.next_node
+        return (out + "\n")
