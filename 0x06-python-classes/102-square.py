@@ -51,4 +51,4 @@ class Square:
         """ get the area to be evaluated when used with an objects
         """
 
-        return (self.__area)
+        return (self.__size * self.__size)
