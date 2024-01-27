@@ -52,3 +52,34 @@ class Square:
         """
 
         return (self.__size * self.__size)
+
+        def __repr__(self):
+        """ get the area to be evaluated when used with an objects
+        """
+
+        return (self.__size * self.__size)
+    def __repr__(self):
+        """ get the area to be evaluated when used with an objects
+        """
+
+        return (self.__size * self.__size)
+    def __repr__(self):
+        """ get the area to be evaluated when used with an objects
+        """
+
+        return (self.__size * self.__size)
+    def __repr__(self):
+        """ get the area to be evaluated when used with an objects
+        """
+
+        return (self.__size * self.__size)
+    def __repr__(self):
+        """ get the area to be evaluated when used with an objects
+        """
+
+        return (self.__size * self.__size)
+    def __repr__(self):
+        """ get the area to be evaluated when used with an objects
+        """
+
+        return (self.__size * self.__size)

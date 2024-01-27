@@ -108,3 +108,10 @@ class Square:
                 out += "#"
             out += "\n"
         return (out[:-1])
+
+
+    def __eq__(self, other):
+        """dunder method to find equality
+        """
+        return (self.area == other.area)
+    
