@@ -95,3 +95,16 @@ class Square:
     def __str__(self):
         """describe how to print instances of this class
         """
+        out = ""
+        if (self.__size == 0):
+            out = "\n"
+            return (out)
+        for t in range(self.__position[1]):
+            out += "\n"
+        for r in range(self.__size):
+            for e in range(self.__position[0]):
+                out += ' '
+            for d in range(self.__size):
+                out += '#'
+            out += '\n'
+        return (out[:-1])
