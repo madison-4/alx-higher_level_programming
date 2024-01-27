@@ -103,8 +103,8 @@ class Square:
             out += "\n"
         for r in range(self.__size):
             for e in range(self.__position[0]):
-                out += ' '
+                out += " "
             for d in range(self.__size):
-                out += '#'
-            out += '\n'
+                out += "#"
+            out += "\n"
         return (out[:-1])
