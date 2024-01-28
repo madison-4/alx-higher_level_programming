@@ -47,39 +47,38 @@ class Square:
         self.__size = value
         return (self.__size)
 
-    def __repr__(self):
+    def __eq__(self, other):
         """ get the area to be evaluated when used with an objects
         """
 
-        return (self.__size * self.__size)
+        return (self.area() == other.area())
 
-        def __repr__(self):
+    def __lt__(self, other):
         """ get the area to be evaluated when used with an objects
         """
 
-        return (self.__size * self.__size)
-    def __repr__(self):
+        return (self.area() < other.area())
+
+    def __gt__(self, other):
         """ get the area to be evaluated when used with an objects
         """
 
-        return (self.__size * self.__size)
-    def __repr__(self):
-        """ get the area to be evaluated when used with an objects
+        return (self.area() > other.area())
+
+    def __le__(self, other):
+        """dunder method fr less than
         """
 
-        return (self.__size * self.__size)
-    def __repr__(self):
-        """ get the area to be evaluated when used with an objects
+        return (self.area() <= other.area())
+
+    def __ge__(self, other):
+        """dunder for greater than equal to in the bject
         """
 
-        return (self.__size * self.__size)
-    def __repr__(self):
-        """ get the area to be evaluated when used with an objects
+        return (self.area() >= other.area())
+
+    def __ne__(self, other):
+        """dunder for negative equality
         """
 
-        return (self.__size * self.__size)
-    def __repr__(self):
-        """ get the area to be evaluated when used with an objects
-        """
-
-        return (self.__size * self.__size)
+        return (self.area() != other.area())
