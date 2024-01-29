@@ -1,3 +1,4 @@
 # About
 More excercises on OOP
-I've forgotten them but am back
+ it seeks to help me properly execite oop
+ 
