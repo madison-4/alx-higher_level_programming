@@ -74,5 +74,22 @@ class Rectangle:
         else:
             return ((2 * self.__width) + (2 * self.__height))
 
-    def print(self):
-        """""
+    def __str__(self):
+        """ Prints the rectangle based on width and height
+        """
+
+        tre = ''
+        for t in range(self.__height):
+            for tree in range(self.__width):
+                tre += '#'
+            tre += '\n'
+        tre = tre[:-1]
+        return (tre)
+
+    def __repr__(self):
+        """give str rep back
+        """
+
+        tre = ''
+        tre += 'Rectangle(' + str(self.__width)
+        tre += ', ' + 
