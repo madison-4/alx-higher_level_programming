@@ -82,6 +82,8 @@ class Rectangle:
         """ Prints the rectangle based on width and height
         """
 
+        if (self.__height == 0 or self.__width == 0):
+            return ""
         tre = []
         for t in range(self.__height):
             for tree in range(self.__width):
