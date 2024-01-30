@@ -93,3 +93,4 @@ class Rectangle:
         tre = ''
         tre += 'Rectangle(' + str(self.__width)
         tre += ', ' + str(self.__height) + ')'
+        return (tre)
