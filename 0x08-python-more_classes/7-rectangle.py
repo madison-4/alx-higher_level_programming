@@ -84,13 +84,13 @@ class Rectangle:
 
         if (self.__height == 0 or self.__width == 0):
             return ""
-        tre = []
+        tre = type(self).print_symbol
         for t in range(self.__height):
             for tree in range(self.__width):
-                tre.append(str(type(self).print_symbol))
+                tre += (type(self).print_symbol)
             if (t != (self.__height - 1)):
-                tre.append('\n')
-        return ("".join(tre))
+                tre += '\n'
+        return (tre)
 
     def __repr__(self):
         """give str rep back
