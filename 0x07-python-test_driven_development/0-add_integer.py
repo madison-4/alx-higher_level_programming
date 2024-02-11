@@ -34,7 +34,6 @@ def add_integer(a, b=98):
     ...
     TypeError: a must be an integer
     """
-    
     try:
         a
     except NameError:
