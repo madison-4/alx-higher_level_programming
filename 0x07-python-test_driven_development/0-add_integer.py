@@ -11,10 +11,13 @@ def add_integer(a, b=98):
 
     TypeError: a must be an integer
     """
+
     try:
         a
     except NameError:
-        raise NameError("a must be an integer")
+        raise NameError('You have to define a')
+    else:
+        pass
     if (type(a) is not int and type(a) is not float):
         raise TypeError("a must be an integer")
     if (type(b) is not int and type(b) is not float):
