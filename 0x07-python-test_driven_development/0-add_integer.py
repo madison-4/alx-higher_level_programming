@@ -2,6 +2,7 @@
 """ This module adds two integers and tests my testing skills
 """
 
+
 def add_integer(a, b=98):
     """A simple addition function
     It adds two integers and returns the results
