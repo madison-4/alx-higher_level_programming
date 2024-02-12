@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-# a function to add two integers or floats
+""" This module adds two integers and tests my testing skills
+"""
 
 def add_integer(a, b=98):
     """A simple addition function
