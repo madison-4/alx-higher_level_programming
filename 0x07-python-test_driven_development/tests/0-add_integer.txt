@@ -31,3 +31,62 @@ Traceback (most recent call last):
 TypeError: add_integer() missing 1 required positional argument: 'a'
 >>> add_integer(5)
 103
+
+==========================================
+
+""" number testing, negative floats et al.
+"""
+>>> add_integer(9.0, 8.9)
+17
+>>> add_integer(-2.3, 9.8)
+7
+>>> add_integer(4.5, -9.8)
+-5
+>>> add_integer(-4, -5)
+-9
+>>> add_integer(5.6, 7.86)
+12
+
+=================================
+
+Testing None Numbers
+
+=================================
+
+If both arguments are non-integers and non-floats, a TypeError message is only
+printed for the first argument.
+
+::
+
+    >>> add_integer("hello", "there")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+The function will fail if infinity is provided.
+
+::
+
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+     
+
+::
+
+    >>> add_integer(2, float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+And again with NaN numbers.
+
+::
+
+    >>> add_integer(float('nan'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
+
+::
+
+    >>> add_integer(2, float('nan'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
