@@ -1,6 +1,9 @@
 # Test for function of addition
 # The tests should ensure that the inputs are correct and the output.
 # ideally they should ensure the function works as intended
+============
+This module provides tests the add_integer module
+=============
 >>> add_integer = __import__("0-add_integer").add_integer
 >>> add_integer(a, 3)
 Traceback (most recent call last):
