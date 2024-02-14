@@ -60,4 +60,34 @@ TypeError: div must be a number
 Traceback (most recent call last):
 ...
 TypeError: div must be a number
->>>
+
+****************************************
+
+Test the first argument
+
+********************************************************
+
+>>> matrix_divided({'tree': 78}, 89)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix_divided((45, 78), 89)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix_divided(['tree', 'top', 78], 78)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix_divided([67, 89, 89], 78)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matric (list of lists) of integers/floats
+>>> matrix_divided([[67, 87, 98], [67, 87, 'tree']], 87)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix_divided([[67, 89, 98], [89, 87]], 76)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
