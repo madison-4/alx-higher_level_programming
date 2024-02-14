@@ -5,15 +5,43 @@
 
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 >>> matrix_divided()
-Traceback (most recent call Last)
+Traceback (most recent call Last):
 ...
 TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
 
 ::
 
 >>> matrix_divided(9)
-Traceback (most recent call last)
+Traceback (most recent call last):
 ...
 TypeError: add() missing 1 required positional argument: 'div'
 
 ::
+
+=========================================================
+
+	Wrong arguments test
+
+********************************
+
+>>> matrix_divided({789, 678}, 8)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix_divided([[4, 5], [5, 6]], 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+>>> matrix_divided([[4,5],[5,6]], NaN)
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+>>> matrix_divided([[4,5], [5,6]], nan)
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+>>> matrix_divided([[4,5], [5, 6]], string)
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+>>> 
