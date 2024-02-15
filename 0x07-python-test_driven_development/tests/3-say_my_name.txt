@@ -15,11 +15,11 @@ Argument 1
 >>> say_my_name()
 Traceback (most recent call last):
 ...
-TypeError: say_my_name() missing 1 required positional argument
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
 >>> say_my_name('tree', 'rew', 'u2')
 Traceback (most recent call last):
 ...
-TypeError: say_my_name() takes 1 to 2 positional arguments but 3 were given
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
 >>> a = 9
 >>> say_my_name(a)
 Traceback (most recent call last):
@@ -37,8 +37,8 @@ TypeError: first_name must be a string
 Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
->>> say_my_name({'dictl': 'good'})
-Traceback (most recent call last)
+>>> say_my_name({'dictl': 'good'}, 'tree')
+Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
 
@@ -65,7 +65,7 @@ Traceback (most recent call last):
 ...
 TypeError: last_name must be a string
 >>> say_my_name('tree', {'dictl': 'good'})
-Traceback (most recent call last)
+Traceback (most recent call last):
 ...
 TypeError: last_name must be a string
 
@@ -76,12 +76,13 @@ Correct takes
 ==================================================================
 
 >>> say_my_name('', '')
-My name is
+My name is  
 >>> say_my_name('', 'tree')
-My name is tree
+My name is  tree
 >>> say_my_name(('Boob'), 'Iger')
 My name is Boob Iger
 >>> say_my_name('Steve')
-My name is Steve
+My name is Steve 
+
 
 ======================================
