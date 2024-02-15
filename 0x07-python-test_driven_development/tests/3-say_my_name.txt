@@ -1,0 +1,23 @@
+==========================================
+
+A test module for a function that prints the name
+
+==========================================
+
+## Checking for the function arguments
+
+******************************************
+
+Argument 1
+
+-----------------------------------------
+say_my_name = __import__('3-say_my_name').say_my_name
+
+>>> say_my_name()
+Traceback (most recent call last):
+...
+TypeError: say_my_name() missing 1 required positional argument
+>>> say_my_name('tree', 'rew', 'u2')
+Traceback (most recent call last):
+...
+TypeError: say_my_name() takes 1 to 2 positional arguments but 3 were given
