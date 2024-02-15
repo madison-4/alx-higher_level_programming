@@ -11,8 +11,7 @@ A test module for a function that prints the name
 Argument 1
 
 -----------------------------------------
-say_my_name = __import__('3-say_my_name').say_my_name
-
+>>> say_my_name = __import__('3-say_my_name').say_my_name
 >>> say_my_name()
 Traceback (most recent call last):
 ...
@@ -30,3 +29,59 @@ TypeError: first_name must be a string
 Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
+>>> say_my_name(None)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+>>> say_my_name(('tuple', 'two'))
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+>>> say_my_name({'dictl': 'good'})
+Traceback (most recent call last)
+...
+TypeError: first_name must be a string
+
+**************************************
+
+Argument 2
+
+*************************************
+
+>>> say_my_name('tree', a)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+>>> say_my_name('tree', ['re'])
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+>>> say_my_name('string2', None)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+>>> say_my_name('tree', ('tuple', 'two'))
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+>>> say_my_name('tree', {'dictl': 'good'})
+Traceback (most recent call last)
+...
+TypeError: last_name must be a string
+
+==================================================================
+
+Correct takes
+
+==================================================================
+
+>>> say_my_name('', '')
+My name is
+>>> say_my_name('', 'tree')
+My name is tree
+>>> say_my_name(('Boob'), 'Iger')
+My name is Boob Iger
+>>> say_my_name('Steve')
+My name is Steve
+
+======================================
