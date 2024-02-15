@@ -5,7 +5,7 @@
 
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 >>> matrix_divided()
-Traceback (most recent call Last):
+Traceback (most recent call last):
 ...
 TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
 
@@ -14,7 +14,7 @@ TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' an
 >>> matrix_divided(9)
 Traceback (most recent call last):
 ...
-TypeError: add() missing 1 required positional argument: 'div'
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
 ::
 
@@ -52,10 +52,6 @@ TypeError: div must be a number
 Traceback (most recent call last):
 ...
 TypeError: div must be a number
->>> matrix_divided([[4,5],[5,6]], (0))
-Traceback (most recent call last):
-...
-TypeError: div must be a number
 >>> matrix_divided([[4,5],[5,6]], {'strew': 7})
 Traceback (most recent call last):
 ...
@@ -82,7 +78,7 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 >>> matrix_divided([67, 89, 89], 78)
 Traceback (most recent call last):
 ...
-TypeError: matrix must be a matric (list of lists) of integers/floats
+TypeError: matrix must be a matrix (list of lists) of integers/floats
 >>> matrix_divided([[67, 87, 98], [67, 87, 'tree']], 87)
 Traceback (most recent call last):
 ...
@@ -100,6 +96,7 @@ Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 >>> matrix_divided([[60, 'NaN', 78], [78, 98, 'inf']], 8)
+Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
