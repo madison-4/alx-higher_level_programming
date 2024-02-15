@@ -21,3 +21,12 @@ TypeError: say_my_name() missing 1 required positional argument
 Traceback (most recent call last):
 ...
 TypeError: say_my_name() takes 1 to 2 positional arguments but 3 were given
+>>> a = 9
+>>> say_my_name(a)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+>>> say_my_name(['re'])
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
