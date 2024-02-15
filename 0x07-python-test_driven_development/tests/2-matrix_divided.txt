@@ -40,7 +40,7 @@ TypeError: div must be a number
 Traceback (most recent call last):
 ...
 TypeError: div must be a number
->>> matrix_divided([[4,5], [5, 6]], string)
+>>> matrix_divided([[4,5], [5, 6]], 'string')
 Traceback (most recent call last):
 ...
 TypeError: div must be a number
