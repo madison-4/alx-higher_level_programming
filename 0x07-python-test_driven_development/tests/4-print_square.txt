@@ -15,7 +15,7 @@ Argumenst to the functions
 >>> print_square(4, 5)
 Traceback (most recent call last):
 ...
-TypeError: print_sqaure() takes 1 positional argument ...
+TypeError: print_square() takes 1 positional argument but 2 were given
 >>> print_square('tree')
 Traceback (most recent call last):
 ...
@@ -35,7 +35,7 @@ TypeError: size must be an integer
 >>> print_square()
 Traceback (most recent call last):
 ...
-TypeError: print_square() takes 1 positional argument but none were given
+TypeError: print_square() missing 1 required positional argument: 'size'
 >>> print_square(-4)
 Traceback (most recent call last):
 ...
@@ -67,9 +67,9 @@ Correct cases
 ##########
 ##########
 ##########
->>> print_sqaure(0)
+>>> print_square(0)
 
->>> print_sqaure(1)
+>>> print_square(1)
 #
 
 
