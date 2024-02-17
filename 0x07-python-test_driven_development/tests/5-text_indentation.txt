@@ -1,5 +1,5 @@
 ================================
-
+11;rgb:0000/0000/0000
 A test to see my string manipulation functio is doing fine
 
 ================================
