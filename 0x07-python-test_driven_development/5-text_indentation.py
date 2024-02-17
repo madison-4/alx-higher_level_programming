@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/python3
 """A moduel to modify a strig based on special characters
 """
 
