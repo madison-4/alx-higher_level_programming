@@ -33,3 +33,11 @@ Correct usage
 >>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit.""")
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
+>>> text_indentation('  ')
+
+>>> text_indentation('string without said chars')
+string without said chars
+>>> text_indentation('try one: in the middle')
+try one
+
+in the middle
