@@ -1,0 +1,16 @@
+================================
+
+A test to see my string manipulation functio is doing fine
+
+================================
+
+Argumenst to the function
+
+***********************************
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation(98)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+>>> text_inde
