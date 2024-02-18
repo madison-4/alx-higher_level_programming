@@ -11,8 +11,7 @@ def text_indentation(text):
         raise TypeError('text must be a string')
     for e in text:
         if (e in ['.', '?', ':']):
-            print(e, end='')
-            print('')
+            print(e)
             print('')
         else:
             print(e, end='')
