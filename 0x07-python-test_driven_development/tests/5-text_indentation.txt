@@ -1,5 +1,5 @@
 ================================
-11;rgb:0000/0000/0000
+
 A test to see my string manipulation functio is doing fine
 
 ================================
@@ -32,11 +32,12 @@ Correct usage
 =================================
 >>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit.""")
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
+<BLANKLINE>
 >>> text_indentation('  ')
-  
+<BLANKLINE>
 >>> text_indentation('string without said chars')
 string without said chars
 >>> text_indentation('try one: in the middle')
-try one
-
+try one:
+<BLANKLINE>
+ in the middle
