@@ -19,6 +19,7 @@ def text_indentation(text):
             continue
         elif (e == ' '):
             if (text[count - 1] == '\n'):
+                count += 1
                 continue
             else:
                 print(e, end='')
