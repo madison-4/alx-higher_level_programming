@@ -13,18 +13,17 @@ def text_indentation(text):
     for e in text:
         if (e in ['.', '?', ':']):
             print(e)
-            count += 1
+            count = 1
             print()
-            count += 1
+            count = 1
             continue
         elif (e == ' '):
-            if (text[count - 1] == '\n'):
-                count += 1
+            if (count == 1):
                 continue
             else:
                 print(e, end='')
-                count += 1
+                count = 0
         else:
             print(e, end='')
-            count += 1
+            count = 0
             continue
