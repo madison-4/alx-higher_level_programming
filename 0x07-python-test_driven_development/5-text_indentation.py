@@ -22,6 +22,7 @@ def text_indentation(text):
                 continue
             else:
                 print(e, end='')
+                count += 1
         else:
             print(e, end='')
             count += 1
