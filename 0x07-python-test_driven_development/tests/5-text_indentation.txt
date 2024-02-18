@@ -40,4 +40,4 @@ string without said chars
 >>> text_indentation('try one: in the middle')
 try one:
 <BLANKLINE>
- in the middle
+in the middle
