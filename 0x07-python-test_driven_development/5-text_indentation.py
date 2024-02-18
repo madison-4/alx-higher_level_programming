@@ -18,3 +18,4 @@ def text_indentation(text):
             continue
         else:
             print(e, end='')
+            continue
