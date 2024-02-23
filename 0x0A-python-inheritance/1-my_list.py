@@ -4,4 +4,8 @@
 
 
 class Mylist(list):
+    """ defines a list that ineriots from int
     """
+
+    def __init__(self):
+        
