@@ -1,0 +1,17 @@
+============================
+
+Tests for a list class that inherits from int
+
+===========================
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> type(my_list)
+<class 'MyList>
+>>> my_list.append(1)
+>>> my_list.append(2)
+>>> my_list.len()
+2
+>>> my_list.append(8)
+>>> tilist = [2 * n for n in my_list]
+>>> print(tilist)
+[2, 4, 16]
