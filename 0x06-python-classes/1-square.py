@@ -9,4 +9,8 @@ class Square:
     It has a size attribute as the private attribute
     """
 
-    __size
+    def __init__(self, size):
+        """a constructr for this class
+        """
+
+        self.__size = size
