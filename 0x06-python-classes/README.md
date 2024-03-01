@@ -12,3 +12,6 @@ Makes an empty square class
 
 ## 1-square.py
 Makes a size private instance variable
+
+## 2-square.py
+make init method
