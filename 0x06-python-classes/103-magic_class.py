@@ -12,7 +12,7 @@ class MagicClass:
     """a class for a python bytecode
     """
 
-    def __init__(self, radius):
+    def __init__(self, radius = 0):
         """ initializer fr the class
         """
 
