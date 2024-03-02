@@ -7,6 +7,7 @@ from math import pi
 """ import the math module to use its pi constant
 """
 
+
 class MagicClass:
     """a class for a python bytecode
     """
