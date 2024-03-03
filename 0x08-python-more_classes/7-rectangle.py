@@ -87,7 +87,7 @@ class Rectangle:
         tre = type(self).print_symbol
         for t in range(self.__height):
             for tree in range(self.__width):
-                tre += (type(self).print_symbol)
+                tre += str(type(self).print_symbol)
             if (t != (self.__height - 1)):
                 tre += '\n'
         return (tre)
