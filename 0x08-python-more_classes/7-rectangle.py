@@ -82,15 +82,18 @@ class Rectangle:
         """ Prints the rectangle based on width and height
         """
 
+        s = []
         if (self.__height == 0 or self.__width == 0):
             return ""
-        tre = type(self).print_symbol
         for t in range(self.__height):
             for tree in range(self.__width):
-                tre += str(type(self).print_symbol)
+                s.append(type(self).print_symbol)
             if (t != (self.__height - 1)):
-                tre += '\n'
-        return (tre)
+                s += '\n'
+        tr = ''
+        for i in s:
+            tr += i
+        return (tr)
 
     def __repr__(self):
         """give str rep back
