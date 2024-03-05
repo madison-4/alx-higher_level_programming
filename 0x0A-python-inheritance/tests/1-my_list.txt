@@ -32,3 +32,9 @@ Tests for a list class that inherits from int
 2
 >>> my_list.print_sorted()
 [-9, 1, 2, 4, 8, 16]
+>>> my_list.pop(0)
+1
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+>>> my_list.extend([9, 8, 7])
