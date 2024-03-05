@@ -7,5 +7,4 @@ def lookup(obj):
     """This function returns said modeuls as an object
     """
 
-    ret = [att for att in dir(obj)]
-    return ret
+    return ([att for att in dir(obj)])
