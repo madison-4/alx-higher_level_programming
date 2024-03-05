@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+"""A module to get the isinancefunction
+"""
+
+
+def is_same_class(obj, a_class):
+    """clones is instance
+    """
+
+    return (isinstance(obj, a_class))
