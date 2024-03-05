@@ -5,7 +5,7 @@ Or wheher it inherits from it
 
 
 def is_kind_of_class(obj, a_class):
-    """ return true if an object is an instance o the class or inherits from the class
+    """ return true if an object is an instance o the class or inherits a class
         @obj is the object in question
         @class is the class in question
     """
