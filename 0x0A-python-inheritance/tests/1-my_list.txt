@@ -23,3 +23,12 @@ Tests for a list class that inherits from int
 >>> my_list.sort()
 >>> print(my_list)
 [1, 2, 2, 4, 8, 16]
+>>> my_list.print_sorted()
+[1, 2, 2, 4, 8, 16]
+>>> my_list.append(-9)
+>>> my_list.print_sorted()
+[-9, 1, 2, 2, 4, 8, 16]
+>>> my_list.pop(2)
+2
+>>> my_list.print_sorted()
+[-9, 1, 2, 4, 8, 16]
