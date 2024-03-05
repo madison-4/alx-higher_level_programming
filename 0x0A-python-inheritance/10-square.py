@@ -12,7 +12,7 @@ class Square(Rectangle):
         """ Constructor to set the size of the square
         """
 
-        self.integer_validator("width", size)
+        self.integer_validator("size", size)
         self.__size = size
         super().__init__(self.__size, self.__size)
 
