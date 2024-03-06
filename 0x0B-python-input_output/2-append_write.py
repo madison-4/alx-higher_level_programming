@@ -3,7 +3,7 @@
 """
 
 
-def write_file(filename="", text=""):
+def append_write(filename="", text=""):
     """ Function to write to files
          Args:
               filename: file path to write to
