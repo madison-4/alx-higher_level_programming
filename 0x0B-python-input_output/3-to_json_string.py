@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import json as j
+import json
 """ The module to return a json representation of an object
 """
 
@@ -10,4 +10,4 @@ def to_json_string(my_obj):
         Args: obj, object to e converetd
     """
 
-    return (j.dumps(my_obj))
+    return (json.dumps(my_obj))
