@@ -8,4 +8,4 @@ def read_file(filename=""):
     """
 
     with open(filename, mode='r', encoding='utf-8') as filse:
-        print(filse.read())
+        return (filse.read())
