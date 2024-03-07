@@ -21,8 +21,6 @@ with open('add_item.json', 'w', encoding="utf-8") as fildes:
     try:
         form = load_from_json_file('add_item.json')
     except Exception as e:
-        check = e
-    if (e is not None):
         form = []
         form.extend(ls)
         save_to_json_file(form, 'add_item.json')
