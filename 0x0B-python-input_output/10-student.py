@@ -8,7 +8,7 @@ class Student:
     """
 
     def __init__(self, first_name, last_name, age):
-        """ Constructor arguments
+        """ Constructor arguments and function
         """
 
         self.age = age
@@ -16,7 +16,7 @@ class Student:
         self.last_name = last_name
 
     def to_json(self, attrs=None):
-        """ retrives dict repre of studnte object
+        """ retrives dict representation of student object
         """
 
         if (type(attrs) is == list and all(type(el) == str for el in attrs)):
