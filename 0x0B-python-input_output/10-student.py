@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ A module to make a class that returns dict repre of its instance
+    document the module for checker
 """
 
 
@@ -9,6 +10,9 @@ class Student:
 
     def __init__(self, first_name, last_name, age):
         """ Constructor arguments and function
+            Args:
+                 first_name(str): non-optional
+                       
         """
 
         self.age = age
@@ -17,6 +21,7 @@ class Student:
 
     def to_json(self, attrs=None):
         """ retrives dict representation of student object
+              retrive them using json
         """
 
         if (type(attrs) is == list and all(type(el) == str for el in attrs)):
