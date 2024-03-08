@@ -23,7 +23,7 @@ class Student:
               retrive them using json
         """
 
-        if (type(attrs) is list and all(type(el) == str for el in attrs)):
+        if (type(attrs) is list and all(type(el) is str for el in attrs)):
             return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
         else:
             return (self.__dict__)
