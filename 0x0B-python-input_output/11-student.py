@@ -32,5 +32,5 @@ class Student:
         """ Take json files and add their attributes to the object
         """
 
-        for k, v in json.item():
+        for k, v in json.items():
             setattr(self, k, v)
