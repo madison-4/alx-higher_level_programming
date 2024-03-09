@@ -9,7 +9,7 @@ def fact(n):
 
     if (n <= 1):
         return (1)
-    return (fact(n - 1))
+    return (n * fact(n - 1))
 
 def pascal_triangle(n):
     """ A function that gives lists of pascal triangle co-efficients
@@ -18,7 +18,7 @@ def pascal_triangle(n):
     if (n <= 0):
         return ([])
     tre = []
-    for r in range(1, n + 1):
-        ls = [((fact(n)) // ((fact(n - r)) * fact(r))) for i in range(1, r + 1)]
+    for r in range(n):
+        ls = [(fact(r)//(fact(j) * fact(r - j))) for j in range(r + 1)]
         tre.append(ls)
     return (tre)
