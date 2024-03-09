@@ -2,6 +2,7 @@
 """ A module to generate pascal's triangle
 """
 
+
 def fact(n):
     """ A functio that generates a factrial
     It only accounts for whole real numbers, no complex numbers
@@ -10,6 +11,7 @@ def fact(n):
     if (n <= 1):
         return (1)
     return (n * fact(n - 1))
+
 
 def pascal_triangle(n):
     """ A function that gives lists of pascal triangle co-efficients
