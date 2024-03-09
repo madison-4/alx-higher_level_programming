@@ -15,7 +15,7 @@ def append_after(filename="", search_string="", new_string=""):
     with open(filename, 'r+',encoding="utf-8") as fildes:
         for l in fildes:
             text += l
-            if (search_string in text):
+            if (search_string in l):
                 text += new_string
     with open(filename, 'w', encoding='utf-8') as fildes:
         fildes.write(text)
