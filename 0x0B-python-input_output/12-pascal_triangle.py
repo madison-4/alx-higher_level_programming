@@ -19,9 +19,6 @@ def pascal_triangle(n):
         return ([])
     tre = []
     for r in range(1, n + 1):
-        rfac = fact(r)
-        nmin = fact(n - r)
-        nfac = fact(n)
-        ls = [((fact(n) // ((fact(n - i)) * fact(i)))) for i in range(1, r + 1)]
+        ls = [((fact(n)) // ((fact(n - r)) * fact(r))) for i in range(1, r + 1)]
         tre.append(ls)
     return (tre)
