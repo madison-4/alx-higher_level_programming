@@ -40,5 +40,46 @@ class Rectangle(base.Base):
         return (self.__width)
 
     @property
-    def height
+    def height(self):
+        """ A getter for the height property of te class
+        """
+
+        return (self.__height)
+    
+    @height.setter
+    def height(self, value):
+        """ A setter for the height property
+        """
+
+        self.__height = value
+        return (self.width)
+    
+    @property
+    def x(self):
+        """ Getter for the x value"""
+
+        return (self.__x)
+    
+    @x.setter
+    def x(self, value):
+        """ Setter for the x value
+        """
+
+        self.__x = value
+        return (self.__x)
+    
+    @property
+    def y(self):
+        """ A getter for the y attribute
+        """
+
+        return (self.__y)
+
+    @y.setter
+    def y(self, value):
+        """ A setter for the y attribute
+        """ 
+
+        self.__y = value
+        return (self.__y)
     
