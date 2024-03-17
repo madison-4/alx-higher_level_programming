@@ -33,7 +33,7 @@ class Rectangle(base.Base):
         """
 
         return (self.__height)
-    
+
     @height.setter
     def height(self, value):
         """ A setter for the height property
@@ -45,13 +45,13 @@ class Rectangle(base.Base):
             raise ValueError("height must be > 0")
         self.__height = value
         return (self.width)
-    
+
     @property
     def x(self):
         """ Getter for the x value"""
 
         return (self.__x)
-    
+
     @x.setter
     def x(self, value):
         """ Setter for the x value
@@ -63,7 +63,7 @@ class Rectangle(base.Base):
             raise ValueError("x must be >= 0")
         self.__x = value
         return (self.__x)
-    
+
     @property
     def y(self):
         """ A getter for the y attribute
@@ -74,7 +74,7 @@ class Rectangle(base.Base):
     @y.setter
     def y(self, value):
         """ A setter for the y attribute
-        """ 
+        """
 
         if (type(value) is not int):
             raise TypeError("y must be an integer")
@@ -82,7 +82,7 @@ class Rectangle(base.Base):
             raise ValueError("y must be >= 0")
         self.__y = value
         return (self.__y)
-    
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """ The constructor for the Rectangle class
             Args:
@@ -98,12 +98,26 @@ class Rectangle(base.Base):
         self.__x = x
         self.__y = y
         super().__init__(id)
-    
+
     def area(self):
         """ Gets the area of the rectangle
         """
 
         return (self.__width * self.__height)
-    
+
     def display(self):
-        """ Display the rectangle using hash"""
+        """ Display the rectangle using hash
+        """
+
+        for h in range(self.__height):
+            for w in range(self.__width):
+                print(f"#", end="")
+            print()
+
+    def __str__(self):
+        """ Override the stsr nmethod for this class
+        """
+
+        return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width} - {self.__height}")
+
+    
