@@ -118,6 +118,6 @@ class Rectangle(base.Base):
         """ Override the stsr nmethod for this class
         """
 
-        return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width} - {self.__height}")
-
-    
+        part1 = f"[Rectangle] ({self.__id}) {self.__x}/{self.__y}"
+        part2 = f" - {self.__width} - {self.__height}"
+        return (part1 + part2)
