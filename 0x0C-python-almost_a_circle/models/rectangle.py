@@ -109,7 +109,11 @@ class Rectangle(base.Base):
         """ Display the rectangle using hash
         """
 
+        for r in (range(self.__y):
+                  print()
         for h in range(self.__height):
+            for w in range(self.__x):
+                  print(" ", end="")
             for w in range(self.__width):
                 print(f"#", end="")
             print()
@@ -118,6 +122,6 @@ class Rectangle(base.Base):
         """ Override the stsr nmethod for this class
         """
 
-        part1 = f"[Rectangle] ({self.__id}) {self.__x}/{self.__y}"
+        part1 = f"[Rectangle] ({self.id}) {self.__x}/{self.__y}"
         part2 = f" - {self.__width} - {self.__height}"
         return (part1 + part2)
