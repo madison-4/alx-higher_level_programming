@@ -109,7 +109,7 @@ class Rectangle(base.Base):
         """ Display the rectangle using hash
         """
 
-        for r in (range(self.__y):
+        for r in (range(self.__y)):
                   print()
         for h in range(self.__height):
             for w in range(self.__x):
@@ -125,3 +125,9 @@ class Rectangle(base.Base):
         part1 = f"[Rectangle] ({self.id}) {self.__x}/{self.__y}"
         part2 = f" - {self.__width} - {self.__height}"
         return (part1 + part2)
+
+    def update(self, *args):
+        """ A method to update the argunmenst given by init
+        """
+
+        
