@@ -4,7 +4,7 @@
 const rep = process.argv[2];
 const num = parseInt(rep);
 
-if (isNaN(num) || (num < 0)) {
+if (isNaN(num)) {
   console.log('Missing number of occurrences');
   process.exit();
 } else {
