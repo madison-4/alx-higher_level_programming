@@ -3,10 +3,10 @@
 
 const arrayCmd = process.argv;
 const num = parseInt(arrayCmd[2]);
-//const num = repl.replace(/,/g, '');
+// const num = repl.replace(/,/g, '');
 
 if (isNaN(num)) {
-    console.log('Not a number');
+  console.log('Not a number');
 } else {
-    console.log('My number: ' + num);
+  console.log('My number: ' + num);
 }
