@@ -1,4 +1,4 @@
 -- calcukate the average score
 SELECT AVG(`score`)
-FROM `second_table` AS
-`average`;
+AS `average`
+FROM `second_table`;
