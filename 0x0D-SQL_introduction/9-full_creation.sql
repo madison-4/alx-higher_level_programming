@@ -1,3 +1,4 @@
+-- This script creates a table
 /**
 * Creates a table and populates it with various rows
 *  a script that creates a table second_table in the database
