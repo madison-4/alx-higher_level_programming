@@ -1,0 +1,50 @@
+#!/usr/bin/node
+// a script to create a rectangle class
+/**
+ * a class that defines the width and height
+ * It employs getters and setters
+ */
+
+class Rectangle {
+  constructor (w, h) {
+    this.width = w;
+    this.height = h;
+  }
+
+  set width(wi) {
+    const newwidth = parseInt(wi);
+    if (newwidth.isNaN) {
+	    this._width = {};
+	    return this._width;
+    }
+    if (newwidth <= 0) {
+	    this._width = {};
+    }
+    if (newwidth > 0) {
+	    this._width = newwidth;
+    }
+  }
+
+  set height (he) {
+    const newheight = parseInt(he);
+    if (newheight.isNaN) {
+	    this._height = {};
+	    return this._height;
+    }
+    if (newheight <= 0) {
+	    this._height = {};
+    }
+    if (newheight > 0) {
+	    this._height = newheight;
+    }
+  }
+
+  get height () {
+    return this.height;
+  }
+
+  get width () {
+    return this._width;
+  }
+}
+module.exports = Rectangle;
