@@ -1,0 +1,8 @@
+#!/usr/bin/node
+// a script to create a rectangle class
+
+class Rectangle {
+    // It has no constructor
+    constructor () {
+    };
+};
