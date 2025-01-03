@@ -1,0 +1,8 @@
+#!/usr/bin/node
+// a function that creates a new list with each value equal to the value of the initial list, multipled by the index in the list
+
+const list = require('./100-data.js').list;
+const newmap = list.map((elem, index) =>
+  elem * index);
+console.log(list);
+console.log(newmap);
