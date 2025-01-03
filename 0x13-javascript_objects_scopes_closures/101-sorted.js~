@@ -1,0 +1,8 @@
+#!/usr/bin/node
+// a function to sort a dictionary (object)
+
+let dict = require('./101-data.js');
+let newdict = {};
+let keys = object.values(dict);
+const values = object.keys(dict);
+console.log(newdict);
