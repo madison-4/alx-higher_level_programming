@@ -8,13 +8,12 @@
     Attributes:
        The first arg is the user second, the password, third the database
 """
+import sys
+import MySQLdb
 
 if __name__ == "__main__":
     """ This module should not be executed when imported
     """
-
-    import sys
-    import MySQLdb
 
     db = MySQLdb.connect(host=127.0.0.1: 3306, user=sys.argv[1],
     passwd=sys.argv[2], db=sys.argv[3])
