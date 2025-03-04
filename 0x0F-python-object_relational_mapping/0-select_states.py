@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-# a script to list all states from a database
+"""
+    A module to get all staes from the given database
+    The dtabase and passwords are given as commandline arguments
+
+    # a script to list all states from a database
+"""
 
 if __name__ == "__main__":
     import sys
