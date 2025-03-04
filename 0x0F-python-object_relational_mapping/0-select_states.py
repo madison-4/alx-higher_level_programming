@@ -1,12 +1,17 @@
 #!/usr/bin/python3
-"""
-    A module to get all staes from the given database
-    The dtabase and passwords are given as commandline arguments
+"""A module to get all staes from the given database
+    The database and passwords are given as commandline arguments
 
     # a script to list all states from a database
+
+    Attributes:
+       The first arg is the user second, the password, third the database
 """
 
 if __name__ == "__main__":
+    """ This module should not be executed when imported
+    """
+    
     import sys
     import MySQLdb
 
