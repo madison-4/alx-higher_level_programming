@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-import sys
-import MySQLdb
-# This marks the beginning of the comments
 """A module to get all staes from the given database
     The database and passwords are given as commandline arguments
 
@@ -15,6 +12,9 @@ import MySQLdb
 if __name__ == "__main__":
     """ This module should not be executed when imported
     """
+
+    import sys
+    import MySQLdb
 
     db = MySQLdb.connect(host=127.0.0.1: 3306, user=sys.argv[1],
     passwd=sys.argv[2], db=sys.argv[3])
