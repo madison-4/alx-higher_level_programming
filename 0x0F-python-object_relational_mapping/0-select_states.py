@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# This marks the beginning of the comments
 """A module to get all staes from the given database
     The database and passwords are given as commandline arguments
 
@@ -11,7 +12,7 @@
 if __name__ == "__main__":
     """ This module should not be executed when imported
     """
-    
+
     import sys
     import MySQLdb
 
