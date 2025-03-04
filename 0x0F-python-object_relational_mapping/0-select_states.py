@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """A module to get all staes from the given database
     The database and passwords are given as commandline arguments
 
