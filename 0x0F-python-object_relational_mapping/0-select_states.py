@@ -1,9 +1,9 @@
 #!/usr/bin/python3
+import sys
+import MySQLdb
 """ A script to list all states from a database
     The db, username and passwd are args
 """
-import sys
-import MySQLdb
 
 if __name__ == "__main__":
     """ The code should not be executed when imported
