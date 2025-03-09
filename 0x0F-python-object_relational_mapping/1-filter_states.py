@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ A script to list all states from a database
     The db, username and passwd are args
+    It prints states starting with N
 """
 
 if __name__ == "__main__":
@@ -15,5 +16,5 @@ if __name__ == "__main__":
     c.execute("SELECT * FROM `states`")
     states = c.fetchall()
     for state in states:
-        if (state[1].startswith('N'):
+        if (state[1].startswith('N')):
             print(state)
