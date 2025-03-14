@@ -17,7 +17,7 @@ if __name__ == "__main__":
     c = db.cursor()
     term = mysql.connector.connector.escape_string(sys.argv[4])
     c.execute("SELECT * FROM `states` WHERE name = {:s}"
-              .format(str(sys.argv[4])))
+              .format(term)
     states = c.fetchall()
     for state in states:
         print(state)
