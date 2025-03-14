@@ -15,7 +15,7 @@ if __name__ == "__main__":
                          passwd=sys.argv[2], db=sys.argv[3])
     c = db.cursor()
     c.execute("SELECT * FROM `states` WHERE BINARY name = \
-                            '{}'".format(sys.argv[4],replace("'","\'")))
+                            '{:s}'".format(sys.argv[4]))
     states = c.fetchall()
     for state in states:
         print(state)
