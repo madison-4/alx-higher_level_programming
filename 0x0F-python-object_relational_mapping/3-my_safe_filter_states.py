@@ -11,11 +11,13 @@ if __name__ == "__main__":
 
     import sys
     import MySQLdb
+    import mysql.connector
     db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
                          passwd=sys.argv[2], db=sys.argv[3])
     c = db.cursor()
+    term = mysql.connector.connector.escape_string(sys.argv[4])
     c.execute("SELECT * FROM `states` WHERE name = {:s}"
-              .str(format(sys.argv[4])))
+              .format(str(sys.argv[4])))
     states = c.fetchall()
     for state in states:
         print(state)
