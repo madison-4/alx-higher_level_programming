@@ -2,7 +2,7 @@
 """ A script to list all states from a database
     The db, username and passwd are args
     It prints states whose names are the fourth argument
-    It is safe from sql injections
+    prints ordered cities
 """
 
 if __name__ == "__main__":
