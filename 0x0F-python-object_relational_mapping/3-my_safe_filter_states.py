@@ -16,10 +16,10 @@ if __name__ == "__main__":
                          passwd=sys.argv[2], db=sys.argv[3])
     c = db.cursor()
     term = mysql.connector.escape_string(sys.argv[4])
-    c.execute("SELECT * FROM `states` WHERE name = {:s}"
-              .format(term))
+    c.execute("SELECT * FROM `states`")
     states = c.fetchall()
     for state in states:
-        print(state)
+        if state[1] == term:
+            print(state)
     c.close()
     db.close
