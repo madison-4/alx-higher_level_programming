@@ -15,7 +15,7 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
                          passwd=sys.argv[2], db=sys.argv[3])
     c = db.cursor()
-    term = mysql.connector.connector.escape_string(sys.argv[4])
+    term = mysql.connector.escape_string(sys.argv[4])
     c.execute("SELECT * FROM `states` WHERE name = {:s}"
               .format(term))
     states = c.fetchall()
