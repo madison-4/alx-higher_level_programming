@@ -20,7 +20,7 @@ if __name__ == "__main__":
     c.execute("SELECT cities.id, cities.name, states.name
              FROM `cities`
              INNER JOIN `states` ON `cities.states_id` = `states.id`
-             ORDER BY `id` ASC")
+             ORDER BY `cities.id` ASC")
     cities = c.fetchall()
     for city in cities:
         print(city)
