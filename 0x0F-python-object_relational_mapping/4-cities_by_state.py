@@ -18,9 +18,9 @@ if __name__ == "__main__":
                          passwd=sys.argv[2], db=sys.argv[3])
     c = db.cursor()
     c.execute("SELECT `cities`.`id`, `cities`.`name`, `states`.`name`" +
-               "FROM `cities`"+
-               "JOIN `states` ON `cities`.`states_id` = `states.id` "+
-               "ORDER BY `cities.id` ASC;")
+              "FROM `cities`" +
+              "JOIN `states` ON `cities`.`states_id` = `states.id`" +
+              "ORDER BY `cities.id` ASC;")
     places = c.fetchall()
     for city in places:
         print(city)
