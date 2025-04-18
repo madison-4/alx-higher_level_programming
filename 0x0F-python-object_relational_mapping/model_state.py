@@ -10,8 +10,8 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
 
 
-db_url = f"mysql+mysqldb://{sys.argv[1]}:{sys.argv[2]}"+
-f"@localhost:3306/{sys.argv[3]}"
+ur = f"mysql+mysqldb://{sys.argv[1]}:{sys.argv[2]}@localhost:3306/{sys.argv[3]}"
+db_url = ur
 engine = create_engine(db_url, echo=True)
 Base = declarative_base()
 
