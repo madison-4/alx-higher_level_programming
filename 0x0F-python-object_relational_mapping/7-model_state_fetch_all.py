@@ -10,9 +10,13 @@ from sqlalchemy.orm import sessionmaker
 
 
 def printword():
+
+
+    """ This function does the printing
+    """
     use, word, dbase = sys.argv[1:]
     dburl = f"mysql+mysqldb://{use}:{word}@localhost:3306/{dbase}"
-    engine = create_engine(dburl, pre_pool_ping=True)
+    engine = create_engine(dburl)
     Session = sessionmaker(bind=engine)
     session = Session()
     states = session.query(State).order_by(State.id.asc()).all()
