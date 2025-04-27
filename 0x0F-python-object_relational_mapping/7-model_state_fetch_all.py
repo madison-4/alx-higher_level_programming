@@ -11,7 +11,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 
-use, word, dbase = sys.argv[1:4]
+use, word, dbase = sys.argv[1:]
 dburl = f"mysql+mysqldb://{use}:{word}@localhost:3306/{dbase}"
 engine = create_engine(dburl)
 Session = sessionmaker(bind=engine)
