@@ -15,6 +15,8 @@ use, word, dbase = sys.argv[1:]
 dburl = f"mysql+mysqldb://{use}:{word}@localhost:3306/{dbase}"
 engine = create_engine(dburl)
 Session = sessionmaker(bind=engine)
-states = Session.query(State).order_by(State.id).all()
+session = Session()
+states = session.query(State).order_by(State.id).all()
+session.close()
 for state in states:
     print(f"{state.id}: {state.name}")
