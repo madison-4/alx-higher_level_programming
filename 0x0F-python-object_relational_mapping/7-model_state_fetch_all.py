@@ -14,7 +14,7 @@ def printword():
     """
     use, word, dbase = sys.argv[1:]
     dburl = f"mysql+mysqldb://{use}:{word}@localhost:3306/{dbase}"
-    engine = create_engine(dburl)
+    engine = create_engine(dburl, pool_pre_ping=True)
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
