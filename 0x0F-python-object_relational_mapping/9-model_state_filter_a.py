@@ -24,7 +24,7 @@ def statesprint(username, password, database):
     states = session.query(State).order_by(State.id.asc()).all()
 
     for state in states:
-        if a in state.name:
+        if'a' in state.name:
             print(f"{state.id}: {state.name}")
     session.close
 
