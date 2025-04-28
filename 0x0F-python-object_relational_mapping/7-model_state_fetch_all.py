@@ -15,7 +15,6 @@ def statesprint(username, password, database):
     the in prints them.
     """
 
-
     dburl = f"mysql+mysqldb://{username}:{password}@localhost:3306/{database}"
     engine = create_engine(dburl, pool_pre_ping=True)
 
