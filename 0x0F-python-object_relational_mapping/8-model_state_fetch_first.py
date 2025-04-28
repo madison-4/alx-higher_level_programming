@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" A module to print states in ascending order by their state id
+""" A module to print the first state in the states
 It prints states from a db gicven to it
 """
 
@@ -26,8 +26,7 @@ def statesprint(username, password, database):
     if not states:
         print("Nothing")
 
-    for state in states:
-        print(f"{state.id}: {state.name}")
+    print(f"{states.id}: {states.name}")
     session.close
 
 
