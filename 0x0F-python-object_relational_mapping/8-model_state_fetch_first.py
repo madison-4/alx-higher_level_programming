@@ -26,7 +26,7 @@ def statesprint(username, password, database):
     if not states:
         print("Nothing")
 
-    elif:
+    else:
         print(f"{states.id}: {states.name}")
     session.close
 
