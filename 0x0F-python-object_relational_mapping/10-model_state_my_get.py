@@ -24,6 +24,11 @@ def statesprint(username, password, database, state_name):
     states = session.query(State).\
         filter(State.name == state_name).\
         order_by(State.id.asc()).all()
+    if not states:
+        print("Not found")
+    else:
+        for state in states:
+            print(f"{state.id}")
     session.close
 
 
