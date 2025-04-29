@@ -21,7 +21,7 @@ def statesprint(username, password, database, state_name):
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).filter(State.name == state_name).all()
+    states = session.query(State).filter(State.name == state_name).first()
     if not states:
         print("Not found")
     else:
