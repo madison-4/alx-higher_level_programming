@@ -22,7 +22,7 @@ def statesprint(username, password, database):
     session = Session()
 
     states = session.query(State).\
-        filter(User.name.ilike('%a%')).\
+        filter(User.name.like('%a%')).\
         order_by(State.id.asc()).all()
     session.close
 
