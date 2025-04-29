@@ -21,7 +21,8 @@ def statesprint(username, password, database):
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).filter(User.name.ilike('a')).order_by(State.id.asc()).all()
+    states = session.query(State).filter(User.name.ilike('%a%'))
+    .order_by(State.id.asc()).all()
     session.close
 
 
