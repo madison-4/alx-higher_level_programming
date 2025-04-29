@@ -9,7 +9,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 
 
-def statesprint(username, password, database, state_name):
+def statesprint(username, password, database):
     """ This function adds the Louisian state
     the in prints them.
     """
