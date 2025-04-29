@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-""" A module to print states in ascending order by the state
- whose name is given as the fourth argument
-It is also free from sql injections
+""" A module to print the state object with the name passed as an argument
+    The name is the fourth argument
 """
 
 
@@ -22,11 +21,9 @@ def statesprint(username, password, database, state_name):
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).order_by(State.id.asc()).all()
-
-    for state in states:
-        if 'a' in state.name:
-            print(f"{state.id}: {state.name}")
+    states = session.query(State).\
+        filter(State.name == state_name).\
+        order_by(State.id.asc()).all()
     session.close
 
 
@@ -34,5 +31,5 @@ if __name__ == "__main__":
     if len(sys.argv) != 5:
         print("Incorrect number pof arguments")
         sys.exit(1)
-    username, password, database, state_name = sys.argv[1:5]
+    username, password, database = sys.argv[1:5]
     statesprint(username, password, database, state_name)
