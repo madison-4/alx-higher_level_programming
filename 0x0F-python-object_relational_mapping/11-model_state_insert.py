@@ -20,16 +20,17 @@ def statesprint(username, password, database, state_name):
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = State(name = 'Louisiana')
+    state = State(name='Louisiana')
     session.add(state)
     session.commit()
     new_state = session.query(State).filter(State.name == 'Louisiana').first()
     print(f'{new_state.id}')
     session.close
 
+
 if __name__ == "__main__":
     if len(sys.argv) != 4:
         print("Incorrect number of arguments")
         sys.exit(1)
-    username, password, database, state_name = sys.argv[1:4]
+    username, password, database = sys.argv[1:4]
     statesprint(username, password, database)
