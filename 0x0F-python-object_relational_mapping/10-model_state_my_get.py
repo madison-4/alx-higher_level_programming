@@ -21,7 +21,7 @@ def statesprint(username, password, database, state_name):
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).filter(State.name == state_name).first()
+    states = session.query(State).filter(State.name == state_name).all()
     if not states:
         print("Not found")
     else:
@@ -32,7 +32,7 @@ def statesprint(username, password, database, state_name):
 
 if __name__ == "__main__":
     if len(sys.argv) != 5:
-        print("Incorrect number pof arguments")
+        print("Incorrect number of arguments")
         sys.exit(1)
-    username, password, database = sys.argv[1:5]
+    username, password, database, state_name = sys.argv[1:5]
     statesprint(username, password, database, state_name)
