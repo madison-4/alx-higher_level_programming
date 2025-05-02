@@ -21,8 +21,9 @@ def statesprint(username, password, database):
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).filter(State.id == 2).first()
+    states = session.query(State).filter(State.id == 2).one()
     states.name = "New Mexico"
+    session.commit()
     session.close
 
 
