@@ -1,33 +1,23 @@
 #!/usr/bin/python3
-""" A module that defines a state class and an instance of base
-    It links to the MySQL table states
-    uses port 3306
-"""
-
-import sys
-from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base
+# Defines a State model.
+# Inherits from SQLAlchemy Base and links to the MySQL table states.
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
-
-
-# ur = f"mysql+mysqldb://root:root@localhost:3306/hbtn_0e_6_usa"
-# db_url = ur
-# engine = create_engine(db_url, echo=True)
-Base = declarative_base()
+from sqlalchemy.ext.declarative import declarative_base
+from relationship_city import Base, City
 
 
 class State(Base):
-    """ A class that maps to the states table
-        This class will define the table
+    """Represents a state for a MySQL database.
+
+    Attributes:
+        __tablename__ (str): The name of the MySQL table to store States.
+        id (sqlalchemy.Integer): The state's id.
+        name (sqlalchemy.String): The state's name.
+        cities (sqlalchemy.orm.relationship): The State-City relationship.
     """
-
     __tablename__ = "states"
-
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
-    cities = relationship("City", back_ref="cities",
-                          cascade="all, delete")
 
-
-# Base.metadata.create_all(engine)
+    cities = relationship("City", backref="state", cascade="all, delete")

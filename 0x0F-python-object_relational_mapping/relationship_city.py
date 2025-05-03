@@ -1,28 +1,22 @@
 #!/usr/bin/python3
-""" A module that defines a city class and an instance of base
-    It links to the MySQL table cities
-    uses port 3306
-"""
+# Defines a City model.
+# Inherits from SQLAlchemy Base and links to the MySQL table cities.
 
+from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, Integer, String, ForeignKey
-
-
-# ur = f"mysql+mysqldb://root:root@localhost:3306/hbtn_0e_6_usa"
-# db_url = ur
-# engine = create_engine(db_url, echo=True)
 
 Base = declarative_base()
 
+
 class City(Base):
-    """ A class that maps to the states table
-        This class will define the table
+    """Represents a city for a MySQL database.
+
+    Attributes:
+        id (sqlalchemy.Column): The city's id.
+        name (sqlalchemy.Column): The city's name.
+        state_id (sqlalchemy.Column): The city's state id.
     """
-
     __tablename__ = "cities"
-
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
-    states_id = Column(Integer, ForeignKey("states.id"), nullable=False)
-
-# Base.metadata.create_all(engine)
+    state_id = Column(Integer, ForeignKey("states.id"), nullable=False)
