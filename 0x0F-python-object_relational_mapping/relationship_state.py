@@ -27,7 +27,7 @@ class State(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
     cities = relationship("City", back_ref="cities",
-                          cascade="all, delete-orphan")
+                          cascade="all, delete")
 
 
 # Base.metadata.create_all(engine)
