@@ -6,14 +6,13 @@
 
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, ForeignKey
-from relationship_state import Base, State
-from sqlalchemy.orm import relationship
 
 
 # ur = f"mysql+mysqldb://root:root@localhost:3306/hbtn_0e_6_usa"
 # db_url = ur
 # engine = create_engine(db_url, echo=True)
 
+Base = declarative_base()
 
 class City(Base):
     """ A class that maps to the states table
@@ -24,6 +23,6 @@ class City(Base):
 
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
-    states_id = Column(ForeignKey("states.id"), nullable=False)
+    states_id = Column(Integer, ForeignKey("states.id"), nullable=False)
 
 # Base.metadata.create_all(engine)
