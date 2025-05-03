@@ -24,6 +24,7 @@ def statesprint(username, password, database):
 
     cities = session.query(City, State).\
         join(State, State.id == City.state_id).all()
+
     if cities:
         for city, state in cities:
             print(f"{state.name}: ({city.id}) {city.name}")
