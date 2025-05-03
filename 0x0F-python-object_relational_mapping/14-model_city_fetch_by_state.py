@@ -22,12 +22,11 @@ def statesprint(username, password, database):
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    cities = session.query(City, State).\
-        join(State, State.id == City.state_id).all()
 
-    if cities:
-        for city, state in cities:
-            print(f"{state.name}: ({city.id}) {city.name}")
+    for city, state in session.query(City, State)\
+            .filter(City.state_id == State.id)\
+            .order_by(City.id):
+        print(f"{state.name}: ({city.id}) {city.name}")
     session.close
 
 

@@ -6,7 +6,8 @@
 
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, ForeignKey
-from model_state import Base
+from model_state import Base, State
+from sqlalchemy.orm import relationship
 
 
 # ur = f"mysql+mysqldb://root:root@localhost:3306/hbtn_0e_6_usa"
